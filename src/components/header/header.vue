@@ -67,7 +67,8 @@
 </template>
 
 <script type="text/ecmascript-6">
-	import star from '../star/star.vue'
+	import star from '../star/star.vue';
+	
 	export default {
 		props: {
 			seller: {
@@ -264,7 +265,7 @@
 								height:16px
 								vertical-align:top
 								margin-right:6px
-								background-size:16px
+								background-size:16px 16px
 								background-repeat:no-repeat
 								&.decrease
 									bg-img('decrease_2')
@@ -285,7 +286,7 @@
 						.content
 							padding:0 12px
 							line-height:24px
-							fongt-size:12px
+							font-size:12px
 			.detail-close
 				position:relative
 				width:32px

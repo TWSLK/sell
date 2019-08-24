@@ -15,18 +15,23 @@
 			</div>
 		</div>
 		
-		<router-view :seller="seller"></router-view>
+		<router-view :seller="seller" keep-alive></router-view>
   </div>
 </template>
 
 <script>
 import header from './components/header/header.vue';
-
+import {urlParse} from './common/js/util.js';
 
 export default {
 	data(){
 		return {
-			seller:{}
+			seller:{
+				id:(() => {
+					let queryParam = urlParse();
+					return queryParam.id;
+				})()
+			}
 		}
 	},
 	created(){
@@ -34,7 +39,8 @@ export default {
 			// console.log(result.body.seller.avatar);
 			// console.log(result.body);
 			// if(result.body.status === 0){
-				this.seller = result.body.seller;
+				this.seller = result.body.seller; 
+				// this.seller = Object.assign({},this.seller.id);
 				// }
 				// console.log(this.seller);
 		});

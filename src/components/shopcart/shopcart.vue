@@ -328,13 +328,13 @@
 				left:32px
 				bottom:22px
 				z-index:200
-				transition:all .4s cubic-bezier(0.49,-0.29,-0.75,0.41)
+				transition:all .5s cubic-bezier(0.49,-0.29,-0.75,0.41)
 				.inner
 					width:16px
 					height:16px	
 					border-radius:50%
                     background:rgb(0,160,220)
-					transition:all 0.4s linear
+					transition:all 0.5s linear
 		.shopcart-list
 			position:absolute
 			left:0
@@ -343,7 +343,7 @@
 			width:100%	
 			transform:translate3d(0,-100%,0)
 			transition:all .5s
-			&.v-enter,.v-leave
+			&.v-enter,&.v-leave-to
 				opacity:0
 				transform:translate3d(0,0,0)
 			.list-header
@@ -396,10 +396,10 @@
 			background:rgba(7,17,27,0.6)
 			backdrop-filter:blur(10px)
 			transition:all .5s
-			&.fade-enter,.fade-leave
+			&.fade-enter,&.fade-leave-to
 				opacity:0
 				background:rgba(7,17,27,0)
-			&.fade-enter-active,.fade-leave-active
+			&.fade-enter-active,&.fade-leave-active
 				opacity:1
 				background:rgba(7,17,27,0.6)							
 </style>
